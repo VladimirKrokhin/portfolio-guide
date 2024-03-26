@@ -62919,14 +62919,14 @@ function createEditorButton(textContent, title, onclick) {
     editorBox.addButton(button);
 }
 function createRollbackButton() {
-    createEditorButton("Rollback", 'Rollback to default sample', function() {
+    createEditorButton("Сбросить", 'Сбросить до значения по умолчанию', function() {
         localStorage[currentPath] = null;
         initTabs();
         loadSample(currentPath);
     });
 }
 function createRunButton() {
-    createEditorButton("Run", "Ctrl+Enter", runSample);
+    createEditorButton("Запустить", "Ctrl+Enter", runSample);
 }
 function serializeTabsData() {
     return [
@@ -62936,7 +62936,7 @@ function serializeTabsData() {
     ].map((tab)=>tab.session.getValue()).join("\\0");
 }
 function createCopyLinkButton() {
-    createEditorButton("Copy link", "Copy link", function() {
+    createEditorButton("Скопировать ссылку", "Скопировать ссылку", function() {
         let url = new URL(document.URL);
         url.searchParams.set("value", window.btoa(serializeTabsData()));
         navigator.clipboard.writeText(url.toString()).then((r)=>{});
@@ -62975,7 +62975,7 @@ function runSample() {
     (_onmessage = (_window = window).onmessage) !== null && _onmessage !== void 0 ? _onmessage : _window.onmessage = windowError;
     let html = generateTemplate(tabJs.session.getValue(), tabHTML.session.getValue(), tabCSS.session.getValue());
     previewTab = tabManager.open({
-        title: "Result",
+        title: "Результат",
         editorType: bundle_index.EditorType.preview,
         path: "result"
     }, "example");
