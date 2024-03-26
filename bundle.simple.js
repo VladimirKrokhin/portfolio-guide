@@ -62530,10 +62530,10 @@ var layouts_three_columns_namespaceObject = /*#__PURE__*/__webpack_require__.t(t
 
 
 const Layouts = {
-    "Single": layouts_single_namespaceObject,
-    "Two columns bottom": layouts_two_columns_bottom_namespaceObject,
-    "Three rows": layouts_three_rows_namespaceObject,
-    "Three columns": layouts_three_columns_namespaceObject
+    "Одиночный": layouts_single_namespaceObject,
+    "Два столбца снизу": layouts_two_columns_bottom_namespaceObject,
+    "Три строки": layouts_three_rows_namespaceObject,
+    "Три столбца": layouts_three_columns_namespaceObject
 };
 
 ;// CONCATENATED MODULE: ./src/menu.ts
