@@ -62545,7 +62545,7 @@ const Layouts = {
 function addMenu(callback) {
     let menuManager = bundle_index.MenuManager.getInstance();
     let position = 0;
-    let root = "Samples";
+    let root = "Сценарии";
     menuManager.addByPath(root, {
         position: position
     });
@@ -62567,12 +62567,12 @@ function addMenu(callback) {
             position: position
         });
     });
-    root = "View";
+    root = "Вид";
     menuManager.addByPath(root, {
         position: 50
     });
     let toggle = ()=>bundle_index.TabManager.getInstance().containers["console"].toggleShowHide();
-    menuManager.addByPath(root + "/Toggle Console", {
+    menuManager.addByPath(root + "/Развернуть консоль", {
         position: 0,
         exec: toggle,
         hotKey: "F6"
@@ -62586,7 +62586,7 @@ function addMenu(callback) {
             exec: toggle
         }
     ]);
-    root = "View/Layout";
+    root = "Вид/Шаблон";
     menuManager.addByPath(root, {
         position: 100
     });
