@@ -15,7 +15,7 @@ jobs:
       - name: Copying
         uses: canastro/copy-file-action@master
         with:
-          source: "images/"
+          source: "images/*"
           target: "images/"
 
       - name: Install and Build
