@@ -4,8 +4,8 @@ import * as single from "./single.json";
 import * as threeColumns from "./three-columns.json";
 
 export const Layouts = {
-    "Single": single,
-    "Two columns bottom": twoColumnsBottom,
-    "Three rows": threeRows,
-    "Three columns": threeColumns
+    "Одиночный": single,
+    "Два столбца снизу": twoColumnsBottom,
+    "Три строки": threeRows,
+    "Три столбца": threeColumns
 }
