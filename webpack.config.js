@@ -73,7 +73,7 @@ export default {
                     to: "."
                 }, {
                     from: "images/*/*",
-                    to: "images/"
+                    to: "."
                 }, {
                     from: "node_modules/ace-code/ace.d.ts",
                     to: "ace.d.ts"
