@@ -16,7 +16,7 @@ jobs:
       - name: Copy Directory
         uses: MadaraUchiha/copy-action@0.0.1
         with:
-          source: images/
+          source: images/*
           target: images/
 
       - name: Install and Build
