@@ -70,6 +70,10 @@ export default {
                     from: "samples/**/*",
                     to: "."
                 }, {
+                    {
+                    from: "images/*/*",
+                    to: "images/"
+                }, {
                     from: "node_modules/ace-code/ace.d.ts",
                     to: "ace.d.ts"
                 }, {
@@ -86,3 +90,5 @@ export default {
         })
     ]
 };
+
+output.publicPath: /portfolio-guide
