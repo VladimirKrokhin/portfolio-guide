@@ -62479,8 +62479,8 @@ var bundle_index = __webpack_require__(95862);
 ;// CONCATENATED MODULE: ./src/samples.ts
 const SAMPLES = {
     "Creating-ACE-Editor": [
-        'День Открытых Дверей',
-        'ПрофПробы'
+        'dod',
+        'profprobes'
     ],
     "Interacting-with-editor": [],
     "Customising-the-appearance": [],
