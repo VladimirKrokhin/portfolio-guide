@@ -63086,11 +63086,11 @@ function loadSample(path) {
     return html;
 }
 function tabDataIsChanged() {
-    previewTab.setTitle("Result*");
+    previewTab.setTitle("Результат*");
     previewTab.element.style.fontStyle = "italic";
 }
 function tabDataIsRun() {
-    previewTab.setTitle("Result");
+    previewTab.setTitle("Результат");
     previewTab.element.style.fontStyle = "";
 }
 function onSessionValueChange(session) {
