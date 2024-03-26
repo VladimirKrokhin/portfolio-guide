@@ -7,7 +7,7 @@ import {createButtons, getTabData, initTabs, runSample} from "./playground";
 export function addMenu(callback) {
     let menuManager = MenuManager.getInstance();
     let position = 0;
-    let root = "Samples";
+    let root = "Сценарии";
     menuManager.addByPath(root, {position: position});
     Object.keys(SAMPLES).forEach(function (i) {
         let items = SAMPLES[i];
@@ -23,11 +23,11 @@ export function addMenu(callback) {
         menuManager.addByPath(root + '/~' + position, {position: position});
     });
 
-    root = "View";
+    root = "Вид";
     menuManager.addByPath(root, {position: 50});
 
     let toggle = () => TabManager.getInstance().containers["console"].toggleShowHide();
-    menuManager.addByPath(root + "/Toggle Console", {
+    menuManager.addByPath(root + "/Развернуть консоль", {
         position: 0,
         exec: toggle,
         hotKey: "F6"
@@ -41,7 +41,7 @@ export function addMenu(callback) {
         exec: toggle
     }]);
 
-    root = "View/Layout";
+    root = "Вид/Шаблон";
     menuManager.addByPath(root, {position: 100});
     position = 0;
 
