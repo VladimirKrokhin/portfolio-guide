@@ -295,12 +295,12 @@ function addMissingAceScript(html: string) {
 }
 
 function tabDataIsChanged() {
-    previewTab!.setTitle("Result*");
+    previewTab!.setTitle("Результат*");
     previewTab!.element.style.fontStyle = "italic";
 }
 
 function tabDataIsRun() {
-    previewTab!.setTitle("Result");
+    previewTab!.setTitle("Результат");
     previewTab!.element.style.fontStyle = "";
 }
 
