@@ -70,7 +70,6 @@ export default {
                     from: "samples/**/*",
                     to: "."
                 }, {
-                    {
                     from: "images/*/*",
                     to: "images/"
                 }, {
