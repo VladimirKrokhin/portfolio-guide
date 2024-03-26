@@ -803,7 +803,7 @@ class ServiceManager {
 /******/ 	
 /******/ 	/* webpack/runtime/publicPath */
 /******/ 	(() => {
-/******/ 		__webpack_require__.p = "/portfolio-guide";
+/******/ 		__webpack_require__.p = "/portfolio-guide/";
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/importScripts chunk loading */
