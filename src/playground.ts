@@ -109,7 +109,7 @@ function createEditorButton(textContent: string, title: string, onclick: () => v
 }
 
 function createRollbackButton() {
-    createEditorButton("Rollback", 'Rollback to default sample', function () {
+    createEditorButton("Сбросить", 'Сбросить до значения по умолчанию', function () {
         localStorage[currentPath!] = null;
         initTabs();
         loadSample(currentPath!);
@@ -117,7 +117,7 @@ function createRollbackButton() {
 }
 
 function createRunButton() {
-    createEditorButton("Run", "Ctrl+Enter", runSample);
+    createEditorButton("Запустить", "Ctrl+Enter", runSample);
 }
 
 function serializeTabsData() {
@@ -125,7 +125,7 @@ function serializeTabsData() {
 }
 
 function createCopyLinkButton() {
-    createEditorButton("Copy link", "Copy link", function () {
+    createEditorButton("Скопировать ссылку", "Скопировать ссылку", function () {
         let url = new URL(document.URL);
         url.searchParams.set("value", window.btoa(serializeTabsData()));
         navigator.clipboard.writeText(url.toString()).then(r => {
@@ -166,7 +166,7 @@ export function runSample() {
     window.onmessage ??= windowError;
     let html = generateTemplate(tabJs.session.getValue(), tabHTML.session.getValue(), tabCSS.session.getValue())
     previewTab = tabManager.open({
-        title: "Result",
+        title: "Результат",
         editorType: EditorType.preview,
         path: "result"
     }, "example");
