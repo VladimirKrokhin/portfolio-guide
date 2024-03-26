@@ -76,7 +76,7 @@ let sampleValues: [string, string, string] | undefined;
 
 function loadHashSample() {
     hashSample = new URL(document.URL).hash.replace("#", "");
-    let path = 'samples/' + (allSamples.includes(hashSample) ? hashSample : "день-открытых-дверей");
+    let path = 'samples/' + (allSamples.includes(hashSample) ? hashSample : "dod");
     let value = new URL(document.URL).searchParams.get("value");
     if (value) {
         try {
