@@ -48,7 +48,9 @@ export default {
     },
     output: {
         filename: 'bundle.[name].js',
-        path: __dirname + '/build'
+        path: __dirname + '/build',
+        publicPath: "/portfolio-guide"
+
     },
     optimization: {
         minimize: false
@@ -90,4 +92,3 @@ export default {
     ]
 };
 
-output.publicPath: /portfolio-guide
