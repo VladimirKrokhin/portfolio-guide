@@ -1,7 +1,7 @@
 export const SAMPLES = {
     "Creating-ACE-Editor": [
-        'Hello-World',
-        'Autocompletion',
+        'День Открытых Дверей',
+        'ПрофПробы',
         'Shadow-DOM',
         'Basic-options',
         'Hard-wrapping'
