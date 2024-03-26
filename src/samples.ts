@@ -1,7 +1,7 @@
 export const SAMPLES = {
     "Creating-ACE-Editor": [
-        'День Открытых Дверей',
-        'ПрофПробы',
+        'dod',
+        'profprobes',
     ],
     "Interacting-with-editor": [
     ],
