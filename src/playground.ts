@@ -57,7 +57,7 @@ onResize();
 
 let allSamples = Object.values(SAMPLES).reduce((prev, curr) => prev.concat(curr.map(path => path.toLowerCase())), []);
 
-let tabCSS: Tab<Ace.EditSession>, tabHTML: Tab<Ace.EditSession>, tabJs: Tab<Ace.EditSession>;
+let tabCSS: Tab<Ace.EditSession>, tabHTML: Tab<Ace.EditSession>, tabMD: Tab<Ace.EditSession>;
 
 function getTab(title: string, path: string): Tab<Ace.EditSession> {
     let tab = tabManager.open<Ace.EditSession>({title: title, path: path}, "main");
@@ -68,7 +68,7 @@ function getTab(title: string, path: string): Tab<Ace.EditSession> {
 export function initTabs() {
     tabCSS = getTab("CSS", "sample.css");
     tabHTML = getTab("HTML", "sample.html");
-    tabJs = getTab("Markdown", "guide.md");
+    tabMD = getTab("Markdown", "guide.md");
 }
 
 let hashSample;
@@ -121,7 +121,7 @@ function createRunButton() {
 }
 
 function serializeTabsData() {
-    return [tabJs, tabCSS, tabHTML].map(tab => tab.session.getValue()).join("\\0");
+    return [tabMD, tabCSS, tabHTML].map(tab => tab.session.getValue()).join("\\0");
 }
 
 function createCopyLinkButton() {
@@ -164,7 +164,7 @@ export function createButtons() {
 
 export function runSample() {
     window.onmessage ??= windowError;
-    let html = generateTemplate(tabJs.session.getValue(), tabHTML.session.getValue(), tabCSS.session.getValue())
+    let html = generateTemplate(tabMD.session.getValue(), tabHTML.session.getValue(), tabCSS.session.getValue())
     previewTab = tabManager.open({
         title: "Результат",
         editorType: EditorType.preview,
@@ -242,14 +242,14 @@ export function getTabData() {
         storage["@file@" + tab.path] = AceEditor.getSessionState(tab);
     }
 
-    saveTabData(tabJs);
+    saveTabData(tabMD);
     saveTabData(tabCSS);
     saveTabData(tabHTML);
     return storage;
 }
 
 function setTabValues(samples: [string, string, string]) {
-    tabJs.session.setValue(samples[0]);
+    tabMD.session.setValue(samples[0]);
     tabCSS.session.setValue(samples[1]);
     tabHTML.session.setValue(addMissingAceScript(samples[2]));
 
