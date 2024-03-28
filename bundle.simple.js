@@ -62854,7 +62854,7 @@ function getTab(title, path) {
 function initTabs() {
     tabCSS = getTab("CSS", "sample.css");
     tabHTML = getTab("HTML", "sample.html");
-    tabJs = getTab("Markdown", "guide.js");
+    tabJs = getTab("Markdown", "guide.md");
 }
 let hashSample;
 let sampleValues;
