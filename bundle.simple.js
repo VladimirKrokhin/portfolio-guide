@@ -62584,7 +62584,6 @@ function addMenu(callback) {
 ;// CONCATENATED MODULE: ./src/template.ts
 function generateTemplate(js, html, css) {
     if (useCustomUserCode(html)) {
-        html += `<script>${js}</script>`;
         html += `<style>${css}</style>`;
         return html;
     }
@@ -62618,7 +62617,6 @@ function generateTemplate(js, html, css) {
 
 </script>
 ${html}
-<script>${js}</script>
 </body>
 </html>`;
 }
@@ -62856,7 +62854,7 @@ function getTab(title, path) {
 function initTabs() {
     tabCSS = getTab("CSS", "sample.css");
     tabHTML = getTab("HTML", "sample.html");
-    tabJs = getTab("JavaScript", "sample.js");
+    tabJs = getTab("Markdown", "guide.js");
 }
 let hashSample;
 let sampleValues;
