@@ -133,14 +133,6 @@ function createCopyLinkButton() {
     });
 }
 
-function createCopyStateButton() {
-    createEditorButton("Copy state", "Copy state", function () {
-        saveSample();
-        let url = new URL(document.URL);
-        url.searchParams.set("state", window.btoa(localStorage[currentPath!]));
-        navigator.clipboard.writeText(url.toString()).then(r => {
-        });
-    });
 }
 
 function createCloseConsoleButton() {
@@ -157,7 +149,6 @@ function createCloseConsoleButton() {
 export function createButtons() {
     createRollbackButton();
     createCopyLinkButton();
-    // createCopyStateButton();
     createRunButton();
     createCloseConsoleButton();
 }
@@ -257,7 +248,7 @@ function setTabValues(samples: [string, string, string]) {
 }
 
 function loadSample(path: string) {
-    let js = request(path + '/sample.js').then(function (response: XMLHttpRequest) {
+    let md = request(path + '/guide.md').then(function (response: XMLHttpRequest) {
         return `//${pathToTitle(path)}\n\n` + response.responseText;
     });
     let css = request(path + '/sample.css').then(function (response: XMLHttpRequest) {
@@ -267,7 +258,7 @@ function loadSample(path: string) {
         return response.responseText;
     });
 
-    Promise.all([js, css, html]).then(
+    Promise.all([md, css, html]).then(
         function (samples) {
             setTabValues(samples);
         },
