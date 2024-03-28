@@ -62910,14 +62910,6 @@ function createCopyLinkButton() {
         navigator.clipboard.writeText(url.toString()).then((r)=>{});
     });
 }
-function createCopyStateButton() {
-    createEditorButton("Copy state", "Copy state", function() {
-        saveSample();
-        let url = new URL(document.URL);
-        url.searchParams.set("state", window.btoa(localStorage[currentPath]));
-        navigator.clipboard.writeText(url.toString()).then((r)=>{});
-    });
-}
 function createCloseConsoleButton() {
     consoleBox.renderButtons([
         {
@@ -62933,7 +62925,6 @@ function createCloseConsoleButton() {
 function createButtons() {
     createRollbackButton();
     createCopyLinkButton();
-    // createCopyStateButton();
     createRunButton();
     createCloseConsoleButton();
 }
@@ -63019,7 +63010,7 @@ function setTabValues(samples) {
     runSample();
 }
 function loadSample(path) {
-    let js = request(path + '/sample.js').then(function(response) {
+    let md = request(path + '/guide.md').then(function(response) {
         return `//${pathToTitle(path)}\n\n` + response.responseText;
     });
     let css = request(path + '/sample.css').then(function(response) {
@@ -63029,7 +63020,7 @@ function loadSample(path) {
         return response.responseText;
     });
     Promise.all([
-        js,
+        md,
         css,
         html
     ]).then(function(samples) {
