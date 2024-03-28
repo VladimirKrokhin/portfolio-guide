@@ -1,6 +1,5 @@
 export function generateTemplate(js, html, css) {
     if (useCustomUserCode(html)) {
-        html+=`<script>${js}</script>`;
         html+=`<style>${css}</style>`;
         return html;
     }
@@ -34,7 +33,6 @@ export function generateTemplate(js, html, css) {
 
 </script>
 ${html}
-<script>${js}</script>
 </body>
 </html>`;
 }

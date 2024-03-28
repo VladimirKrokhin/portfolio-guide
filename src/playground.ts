@@ -68,7 +68,7 @@ function getTab(title: string, path: string): Tab<Ace.EditSession> {
 export function initTabs() {
     tabCSS = getTab("CSS", "sample.css");
     tabHTML = getTab("HTML", "sample.html");
-    tabJs = getTab("JavaScript", "sample.js");
+    tabJs = getTab("Markdown", "guide.js");
 }
 
 let hashSample;
