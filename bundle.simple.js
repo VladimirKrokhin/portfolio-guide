@@ -62842,7 +62842,7 @@ let tabState = localStorage.playground_tabs ? JSON.parse(localStorage.playground
 tabManager.setState(tabState);
 onResize();
 let allSamples = Object.values(SAMPLES).reduce((prev, curr)=>prev.concat(curr.map((path)=>path.toLowerCase())), []);
-let tabCSS, tabHTML, tabJs;
+let tabCSS, tabHTML, tabMD;
 function getTab(title, path) {
     let tab = tabManager.open({
         title: title,
@@ -62854,7 +62854,7 @@ function getTab(title, path) {
 function initTabs() {
     tabCSS = getTab("CSS", "sample.css");
     tabHTML = getTab("HTML", "sample.html");
-    tabJs = getTab("Markdown", "guide.md");
+    tabMD = getTab("Markdown", "guide.md");
 }
 let hashSample;
 let sampleValues;
@@ -62898,7 +62898,7 @@ function createRunButton() {
 }
 function serializeTabsData() {
     return [
-        tabJs,
+        tabMD,
         tabCSS,
         tabHTML
     ].map((tab)=>tab.session.getValue()).join("\\0");
@@ -62941,7 +62941,7 @@ function runSample() {
     var _window;
     var _onmessage;
     (_onmessage = (_window = window).onmessage) !== null && _onmessage !== void 0 ? _onmessage : _window.onmessage = windowError;
-    let html = generateTemplate(tabJs.session.getValue(), tabHTML.session.getValue(), tabCSS.session.getValue());
+    let html = generateTemplate(tabMD.session.getValue(), tabHTML.session.getValue(), tabCSS.session.getValue());
     previewTab = tabManager.open({
         title: "Результат",
         editorType: bundle_index.EditorType.preview,
@@ -63007,13 +63007,13 @@ function getTabData() {
     function saveTabData(tab) {
         storage["@file@" + tab.path] = bundle_index.AceEditor.getSessionState(tab);
     }
-    saveTabData(tabJs);
+    saveTabData(tabMD);
     saveTabData(tabCSS);
     saveTabData(tabHTML);
     return storage;
 }
 function setTabValues(samples) {
-    tabJs.session.setValue(samples[0]);
+    tabMD.session.setValue(samples[0]);
     tabCSS.session.setValue(samples[1]);
     tabHTML.session.setValue(addMissingAceScript(samples[2]));
     runSample();
