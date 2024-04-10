@@ -65,7 +65,7 @@ body {
     /*
     или 
     background-image: url("./images/backgrounds/background#.jpg");
-    background-size: cover;
+    background-size: auto;
     */
 }
 
@@ -93,7 +93,7 @@ body {
   *(символ решетки и 6 шестнадцатеричных цифр;
   например, #E4F532 (один из оттенков желтого))*
 
-* Примечание: используйте сайт *coolors.co* для подбора цвета
+* Примечание: используйте сайт *coolors.co/generate* для подбора цвета
 
 * Также установите размер, где это требуется
 
