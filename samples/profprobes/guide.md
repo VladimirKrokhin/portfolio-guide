@@ -65,7 +65,7 @@ body {
     /*
     или 
     background-image: url("./images/backgrounds/background#.jpg");
-    background-size: auto;
+    background-size: cover;
     */
 }
 
