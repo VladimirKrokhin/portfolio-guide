@@ -40,19 +40,21 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y libraw-dev
 
-      - name: Install and Build
+      - name: Install and Build Back
+        working-directory: ./redcarpet
         run: |
           ls -la
           ls -la redcarpet/
           cd redcarpet/
-          go mod init redcpt
+          go mod init redcarpet
           go mod tidy
           go build -v ./...
-          ./redcpt -c config.toml
+          ./redcarpet -c config.toml
+      - name: Install and Build UI
+        run: |
           npm install
           npm ci
           npm run build
-
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
