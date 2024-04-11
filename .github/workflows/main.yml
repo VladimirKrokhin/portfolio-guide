@@ -16,7 +16,7 @@ jobs:
       - name: Update submodules
         uses: actions/checkout@v3
         with:
-          path: path/to/submodule
+          path: redcarpet/ 
           submodules: true
 
       - name: Set up Go
