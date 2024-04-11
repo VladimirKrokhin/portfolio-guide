@@ -36,11 +36,11 @@ jobs:
 
       - name: Install and Build
         run: |
-          ls -la
-          pwd
+          cd redcarpet/
           go get ./...
           go build
           ./redcarpet
+          cd ..
           npm install
           npm ci
           npm run build
