@@ -10,13 +10,15 @@ jobs:
     concurrency: ci-${{ github.ref }}
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout 
+      - uses: actions/checkout@v3
       - name: Checkout and update submodules
       - uses: actions/checkout@v3
-      - uses: actions/checkout@v3
         with:
-          path: path/to/submodule
+          path: redcarpet/
           submodules: recursive
       - run: git submodule sync
+
       - name: Set up Go
         uses: actions/setup-go@v3
         with:
