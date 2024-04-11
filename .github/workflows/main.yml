@@ -44,9 +44,11 @@ jobs:
         run: |
           ls -la
           ls -la redcarpet/
-          go get ./redcarpet
-          go build ./redcarpet
-          ./redcarpet/redcarpet
+          cd redcarpet/
+          go mod init redcarpet
+          go mod tidy
+          go build -v ./...
+          ./redcarpet
           npm install
           npm ci
           npm run build
