@@ -41,9 +41,10 @@ jobs:
           sudo apt-get install -y libraw-dev
 
       - name: Install and Build Back
-        working-directory: ./redcarpet/
+        working-directory: ./redcarpet
         run: |
           ls -la
+          cd redcarpet/
           go mod init redcarpet
           go mod tidy
           go build -v ./...
