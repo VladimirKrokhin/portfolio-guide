@@ -58,6 +58,7 @@ jobs:
           folder: build
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build/static
+
+      - name: Run Backend
         run: |
           ./redcarpet/redcarpet -c config.toml
-
