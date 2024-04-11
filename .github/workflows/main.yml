@@ -11,14 +11,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout and update submodules
-        uses: composite-action/composite-action@v1
+      - uses: actions/checkout@v3
+      - uses: actions/checkout@v3
         with:
-          steps:
-            - uses: actions/checkout@v3
-              with:
-                path: redcarpet/
-                submodules: true
-            - run: git submodule update --init --recursive 
+          path: path/to/submodule
+          submodules: recursive
+      - run: git submodule sync
       - name: Set up Go
         uses: actions/setup-go@v3
         with:
