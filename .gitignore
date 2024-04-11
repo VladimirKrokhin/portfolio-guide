@@ -1,0 +1,4 @@
+redcarpet/*.exe
+redcarpet/redcarpet
+redcarpet/node_modules
+redcarpet/*.log
