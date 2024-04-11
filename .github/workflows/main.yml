@@ -43,10 +43,10 @@ jobs:
       - name: Install and Build Back
         working-directory: ./redcarpet
         run: |
+          ls -la
           go mod init redcarpet
           go mod tidy
           go build -v ./...
-          ls -la
 
       - name: Install and Build UI
         run: |
