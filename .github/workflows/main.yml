@@ -37,7 +37,7 @@ jobs:
       - name: Install and Build
         run: |
           cd redcarpet/
-          go mod init redcarpet
+          ls -la
           go build
           ./redcarpet
           cd ..
