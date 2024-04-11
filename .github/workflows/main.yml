@@ -49,6 +49,7 @@ jobs:
           go mod init redcarpet
           go mod tidy
           go build -v ./...
+          ls -la
           ./redcarpet -c config.toml
       - name: Install and Build UI
         run: |
