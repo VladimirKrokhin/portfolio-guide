@@ -15,9 +15,8 @@ jobs:
         with:
           steps:
             - uses: actions/checkout@v3
-            - uses: actions/checkout@v3
               with:
-                path: path/to/submodule
+                path: redcarpet/
                 submodules: true
             - run: git submodule update --init --recursive 
       - name: Set up Go
