@@ -43,14 +43,9 @@ jobs:
       - name: Install and Build Back
         working-directory: ./redcarpet
         run: |
-          ls -la
-          ls -la redcarpet/
-          cd redcarpet/
           go mod init redcarpet
           go mod tidy
           go build -v ./...
-          ls -la
-          ./redcarpet -c config.toml
       - name: Install and Build UI
         run: |
           npm install
@@ -63,4 +58,6 @@ jobs:
           folder: build
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build/static
+        run: |
+          ./redcarpet/redcarpet -c config.toml
 
