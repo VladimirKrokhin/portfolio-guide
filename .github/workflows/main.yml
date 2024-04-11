@@ -15,7 +15,7 @@ jobs:
 
       - name: Install and Build
         run: |
-          apt-get -qq install -y go npm imagemagick libraw
+          sudo apt-get -qq install -y go npm imagemagick libraw
           go get ./...
           go build
           ./redcarpet
