@@ -1,0 +1,3 @@
+[submodule "redcarpet"]
+	path = redcarpet
+	url = https://gitlab.com/fengshaun/redcarpet
