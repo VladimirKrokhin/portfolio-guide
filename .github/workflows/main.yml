@@ -45,10 +45,10 @@ jobs:
           ls -la
           ls -la redcarpet/
           cd redcarpet/
-          go mod init redcarpet
+          go mod init redcpt
           go mod tidy
           go build -v ./...
-          ./redcarpet
+          ./redcpt -c config.toml
           npm install
           npm ci
           npm run build
