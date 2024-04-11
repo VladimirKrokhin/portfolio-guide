@@ -44,7 +44,7 @@ jobs:
         run: |
           cd redcarpet
           ls -la
-          git mod init
+          go mod init
           go build
           ./redcarpet
           cd ..
