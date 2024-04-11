@@ -43,8 +43,8 @@ jobs:
       - name: Install and Build
         run: |
           cd redcarpet
-          ls -la
-          go mod init
+          ls -la redcarpet/
+          go get ./..
           go build
           ./redcarpet
           cd ..
