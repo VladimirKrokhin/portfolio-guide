@@ -51,6 +51,7 @@ jobs:
 
       - name: Install and Build UI
         run: |
+          npm install
           npm ci
           npm run build
 
