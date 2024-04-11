@@ -1,8 +1,8 @@
 # base path of the gallery on the filesystem
-BasePath = "/images"
+BasePath = "../images"
 
 # log file location
-LogFile = "/var/log/redcarpet.log"
+LogFile = "redcarpet.log"
 
 # base url
 # if wanting to mount redcarpet under a subdirectory, set it to whatever you want
