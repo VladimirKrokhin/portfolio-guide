@@ -1,3 +1,4 @@
+
 import React, { Component} from "react";
 import ReactDOM from "react-dom";
 import classNames from "classnames";
@@ -33,6 +34,7 @@ class App extends React.Component {
 }
 
 ReactDOM.render(
-	React.createElement(App),
-	document.querySelector("#app-root")
+  <App />,
+  document.querySelector("#app-root")
 );
+
