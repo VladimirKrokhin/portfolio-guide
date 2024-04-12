@@ -70,7 +70,7 @@ export default {
                     to: "."
                 }, {
 		    from: "redcarpet/*/**",
-		    to: ".:
+		    to: "."
 		}, {	
                     from: "samples/*/*",
                     to: "."
