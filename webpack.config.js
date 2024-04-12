@@ -69,7 +69,10 @@ export default {
                     from: "index.html",
                     to: "."
                 }, {
-                    from: "samples/**/*",
+		    from: "redcarpet/*/**",
+		    to: ".:
+		}, {	
+                    from: "samples/*/*",
                     to: "."
                 }, {
                     from: "images/*/*",
