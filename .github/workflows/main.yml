@@ -44,7 +44,6 @@ jobs:
 
       - name: Install and Build UI
         run: |
-          cd ..
           ls -la
           npm install
           npm ci
