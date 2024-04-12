@@ -21,7 +21,6 @@ export default {
     devtool: 'source-map',
     entry: {
         simple: './src/playground.ts',
-	redcarpet: "./redcarpet/ui/index.js",
     },
     mode: "production",
     module: {
