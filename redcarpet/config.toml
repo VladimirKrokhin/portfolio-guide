@@ -1,5 +1,5 @@
 # base path of the gallery on the filesystem
-BasePath = "../images"
+BasePath = "images/"
 
 # log file location
 LogFile = "redcarpet.log"
@@ -8,7 +8,7 @@ LogFile = "redcarpet.log"
 # if wanting to mount redcarpet under a subdirectory, set it to whatever you want
 # if you want it at the root, set it to "/"
 # trailing slash is necessary
-BaseURL = "/redcarpet/"
+BaseURL = "/"
 
 # where go server should listen for fcgi requests
 ListenAddress = "127.0.0.1:9003"
