@@ -4,7 +4,8 @@
   "scripts": {
     "build": "webpack",
     "start": "webpack-dev-server",
-    "launchRedcarpet": "./redcarpet/redcarpet -c ./redcarpet/config.toml"
+    "launchRedcarpet": "./redcarpet/redcarpet -c ./redcarpet/config.toml",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "ace-code": "^1.32.7",
