@@ -13,12 +13,6 @@ jobs:
       - name: Checkout 
         uses: actions/checkout@v3
 
-      - name: Update submodules
-        uses: actions/checkout@v3
-        with:
-          path: redcarpet/ 
-          submodules: true
-
       - name: Set up Go
         uses: actions/setup-go@v3
         with:
@@ -51,6 +45,7 @@ jobs:
 
       - name: Install and Build UI
         run: |
+          cd ..
           ls -la
           npm install
           npm ci

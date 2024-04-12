@@ -2,7 +2,7 @@ const path = require("path");
 const webpack = require("webpack");
 
 module.exports = {
-    entry: "ui/index.js",
+    entry: "./ui/index.js",
     mode: "production",
     module: {
         rules: [
