@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "scripts": {
     "build": "webpack",
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server",
+    "launchRedcarpet": "./redcarpet/redcarpet -c ./redcarpet/config.toml"
   },
   "dependencies": {
     "ace-code": "^1.32.7",
