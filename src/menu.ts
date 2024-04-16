@@ -59,10 +59,4 @@ export function addMenu(callback) {
         menuManager.addByPath(root + '/' + i, {position: position, exec: changeLayout});
         position++;
     });
-        menuManager.addByPath("Картинки", {
-        position: 0,
-        exec: () => {
-            callback("./sigal"); // Перенаправление на страницу "./sigal"
-        }
-    });
 }

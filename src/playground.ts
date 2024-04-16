@@ -126,7 +126,7 @@ function serializeTabsData() {
 
 function createCopyLinkButton() {
     createEditorButton("Скопировать ссылку", "Скопировать ссылку", function () {
-        let url = new URL(document.URL);
+        let url = new URL(document.URL);nn
         url.searchParams.set("value", window.btoa(serializeTabsData()));
         navigator.clipboard.writeText(url.toString()).then(r => {
         });
@@ -134,6 +134,11 @@ function createCopyLinkButton() {
 }
 
 
+function createImagesLinkButton() {
+    createEditorButton("Картинки", "Посмотреть картинкиea", function () {
+        window.location.href = "https://www.example.com/";
+    });
+}
 
 function createCloseConsoleButton() {
     consoleBox.renderButtons([{
@@ -149,6 +154,7 @@ function createCloseConsoleButton() {
 export function createButtons() {
     createRollbackButton();
     createCopyLinkButton();
+    createImagesLinkButton();
     createRunButton();
     createCloseConsoleButton();
 }
