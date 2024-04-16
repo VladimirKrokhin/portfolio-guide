@@ -62579,11 +62579,10 @@ function addMenu(callback) {
         });
         position++;
     });
-    root = "Картинки";
-    menuManager.addByPath(root, {
-        position: 150,
+    menuManager.addByPath("Картинки", {
+        position: 0,
         exec: ()=>{
-            window.location.href = "https://vladimirkrokhin.github.io/portfolio-guide/sigal/";
+            callback("./sigal"); // Перенаправление на страницу "./sigal"
         }
     });
 }
