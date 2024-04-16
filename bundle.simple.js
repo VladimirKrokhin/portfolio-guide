@@ -62579,6 +62579,13 @@ function addMenu(callback) {
         });
         position++;
     });
+    root = "Картинки";
+    menuManager.addByPath(root, {
+        position: 100
+    });
+    menuManager.addByPath(root + './sigal', {
+        position: 101
+    });
 }
 
 ;// CONCATENATED MODULE: ./src/template.ts
@@ -62599,7 +62606,6 @@ function generateTemplate(js, html, css) {
           vertical-align: baseline;
           height: 100%
       }
-      ${css}
   </style>
 </head>
 <body>
