@@ -13,11 +13,11 @@
 
 # Source directory. Can be set here or as the first argument of the `sigal
 # build` command
-source = "."
+source = "./images"
 
 # Destination directory. Can be set here or as the second argument of the
 # `sigal build` command (default: '_build')
-# destination = '_build'
+destination = 'sigal'
 
 # Theme :
 # - colorbox (default), galleria, photoswipe, or the path to a custom theme
@@ -28,13 +28,13 @@ theme = "galleria"
 # galleria_theme = 'classic'
 
 # Author. Used in the footer of the pages and in the author meta tag.
-# author = ''
+author = 'Владимир Крохин'
 
 # Use originals in gallery (default: False). If True, this will bypass all
 # processing steps (resize, auto-orient, recompress, and any plugin-specific
 # step).
 # Originals will be symlinked if orig_link = True, else they will be copied.
-# use_orig = False
+use_orig = True
 
 # Path to a CSS file that can be used to customize themes
 # user_css =
