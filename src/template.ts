@@ -15,7 +15,6 @@ export function generateTemplate(js, html, css) {
           vertical-align: baseline;
           height: 100%
       }
-      ${css}
   </style>
 </head>
 <body>
