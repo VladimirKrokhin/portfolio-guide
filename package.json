@@ -4,14 +4,13 @@
   "scripts": {
     "build": "webpack",
     "start": "webpack-dev-server",
-    "launchRedcarpet": "./redcarpet/redcarpet -c ./redcarpet/config.toml",
+    "launchSigal": "sigal -v -c ./sigal/sigal.conf.py",
     "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "ace-code": "^1.32.7",
     "ace-layout": "^1.4.0",
     "ace-linters": "^1.1.1",
-    "redcarpet": "file:./redcarpet",
     "typescript": "^5.3.3"
   },
   "devDependencies": {

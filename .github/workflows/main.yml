@@ -18,6 +18,10 @@ jobs:
           npm ci
           npm run build
 
+      - name: Install py sigal dependences
+        run: |
+          pip install --no-cache-dir -U sigal
+
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:

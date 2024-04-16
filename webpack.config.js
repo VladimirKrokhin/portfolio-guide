@@ -69,6 +69,9 @@ export default {
                     from: "index.html",
                     to: "."
                 }, {
+                    from: "sigal.conf.py",
+                    to: "."
+                }, {
 		    from: "sigal/*/*",
 		    to: "."
 		}, {	
