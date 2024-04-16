@@ -59,12 +59,10 @@ export function addMenu(callback) {
         menuManager.addByPath(root + '/' + i, {position: position, exec: changeLayout});
         position++;
     });
-    root = "Картинки";
-    menuManager.addByPath(root,
-	{	  
-        position: 150,
-	exec: () => {
-  window.location.href = "https://vladimirkrokhin.github.io/portfolio-guide/sigal/";
-}
+        menuManager.addByPath("Картинки", {
+        position: 0,
+        exec: () => {
+            callback("./sigal"); // Перенаправление на страницу "./sigal"
+        }
     });
 }
