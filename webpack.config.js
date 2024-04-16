@@ -70,12 +70,10 @@ export default {
                     to: "."
                 }, {
                     from: "sigal.conf.py",
-                    to: ".",
-		    logLevel: "trace"
+                    to: "."
                 }, {
-		    from: "sigal/*/*",
-		    to: ".",
-		    logLevel: "trace"
+		    from: "sigal/**/*",
+		    to: "."
 		}, {	
                     from: "samples/*/*",
                     to: "."
