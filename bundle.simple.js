@@ -62582,7 +62582,9 @@ function addMenu(callback) {
     root = "Картинки";
     menuManager.addByPath(root, {
         position: 100,
-        exec: ()=>callback("./sigal")
+        exec: ()=>{
+            window.location.href = "./sigal";
+        }
     });
 }
 
