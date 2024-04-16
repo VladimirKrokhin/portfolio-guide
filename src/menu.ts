@@ -60,10 +60,10 @@ export function addMenu(callback) {
         position++;
     });
     root = "Картинки";
-    menuManager.addByPath(root, {
+    menuManager.addByPaexec: () => {
         position: 150,
-        exec: () => {
-            window.location.href = "./sigal";
-        }
+	exec: () => {
+  window.location.href = "https://vladimirkrokhin.github.io/portfolio-guide/sigal/";
+}
     });
 }
