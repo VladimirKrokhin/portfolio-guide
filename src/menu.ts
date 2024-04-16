@@ -59,10 +59,11 @@ export function addMenu(callback) {
         menuManager.addByPath(root + '/' + i, {position: position, exec: changeLayout});
         position++;
     });
-root = "Картинки";
-menuManager.addByPath(root, {
-    position: 100,
-    exec: () => {
-        window.location.href = "./sigal";
-    }
-});
+    root = "Картинки";
+    menuManager.addByPath(root, {
+        position: 100,
+        exec: () => {
+            window.location.href = "./sigal";
+        }
+    });
+}
