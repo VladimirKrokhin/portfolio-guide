@@ -62579,12 +62579,6 @@ function addMenu(callback) {
         });
         position++;
     });
-    menuManager.addByPath("Картинки", {
-        position: 0,
-        exec: ()=>{
-            callback("./sigal"); // Перенаправление на страницу "./sigal"
-        }
-    });
 }
 
 ;// CONCATENATED MODULE: ./src/template.ts
@@ -62911,8 +62905,14 @@ function serializeTabsData() {
 function createCopyLinkButton() {
     createEditorButton("Скопировать ссылку", "Скопировать ссылку", function() {
         let url = new URL(document.URL);
+        nn;
         url.searchParams.set("value", window.btoa(serializeTabsData()));
         navigator.clipboard.writeText(url.toString()).then((r)=>{});
+    });
+}
+function createImagesLinkButton() {
+    createEditorButton("Картинки", "Посмотреть картинкиea", function() {
+        window.location.href = "https://www.example.com/";
     });
 }
 function createCloseConsoleButton() {
@@ -62930,6 +62930,7 @@ function createCloseConsoleButton() {
 function createButtons() {
     createRollbackButton();
     createCopyLinkButton();
+    createImagesLinkButton();
     createRunButton();
     createCloseConsoleButton();
 }
