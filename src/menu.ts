@@ -60,7 +60,8 @@ export function addMenu(callback) {
         position++;
     });
     root = "Картинки";
-    menuManager.addByPath(root, {position: 100});
-    menuManager.addByPath(root + './sigal', {position: 101});
+    menuManager.addByPath(root, {
+	    position: 100,
+            exec: () => callback("./sigal")});
 
 }
