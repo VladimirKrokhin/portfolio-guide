@@ -62581,10 +62581,8 @@ function addMenu(callback) {
     });
     root = "Картинки";
     menuManager.addByPath(root, {
-        position: 100
-    });
-    menuManager.addByPath(root + './sigal', {
-        position: 101
+        position: 100,
+        exec: ()=>callback("./sigal")
     });
 }
 
