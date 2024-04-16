@@ -135,8 +135,8 @@ function createCopyLinkButton() {
 
 
 function createImagesLinkButton() {
-    createEditorButton("Картинки", "Посмотреть картинкиea", function () {
-        window.location.href = "https://www.example.com/";
+    createEditorButton("Картинки", "Посмотреть картинки", function () {
+        window.location.href = "./sigal";
     });
 }
 
