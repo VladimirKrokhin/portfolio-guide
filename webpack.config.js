@@ -69,7 +69,7 @@ export default {
                     from: "index.html",
                     to: "."
                 }, {
-		    from: "sigal/*",
+		    from: "sigal/*/*",
 		    to: "."
 		}, {	
                     from: "samples/*/*",
