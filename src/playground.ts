@@ -133,6 +133,7 @@ function createCopyLinkButton() {
     });
 }
 
+}
 
 function createCloseConsoleButton() {
     consoleBox.renderButtons([{
