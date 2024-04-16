@@ -62581,7 +62581,7 @@ function addMenu(callback) {
     });
     root = "Картинки";
     menuManager.addByPath(root, {
-        position: 100,
+        position: 150,
         exec: ()=>{
             window.location.href = "./sigal";
         }
