@@ -62600,6 +62600,7 @@ function generateTemplate(js, html, css) {
           height: 100%
       }
   </style>
+      ${css}
 </head>
 <body>
 <script>
