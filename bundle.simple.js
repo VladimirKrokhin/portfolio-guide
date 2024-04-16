@@ -62599,8 +62599,8 @@ function generateTemplate(js, html, css) {
           vertical-align: baseline;
           height: 100%
       }
-  </style>
       ${css}
+  </style>
 </head>
 <body>
 <script>
