@@ -62583,7 +62583,7 @@ function addMenu(callback) {
     menuManager.addByPath(root, {
         position: 150,
         exec: ()=>{
-            window.location.href = "./sigal";
+            window.location.href = "https://vladimirkrokhin.github.io/portfolio-guide/sigal/";
         }
     });
 }
