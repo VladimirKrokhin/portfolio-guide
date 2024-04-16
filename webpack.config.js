@@ -38,7 +38,6 @@ export default {
     resolveLoader: {
         alias: {
             "ace-code/src/requirejs/text": __dirname + "/node_modules/text-loader"
-      ${css}
         },
         modules: [
             "node_modules", __dirname + "/node_modules"
@@ -71,10 +70,12 @@ export default {
                     to: "."
                 }, {
                     from: "sigal.conf.py",
-                    to: "."
+                    to: ".",
+		    logLevel: "trace"
                 }, {
 		    from: "sigal/*/*",
-		    to: "."
+		    to: ".",
+		    logLevel: "trace"
 		}, {	
                     from: "samples/*/*",
                     to: "."
